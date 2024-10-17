@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person & Menu Form</title>
+</head>
+<body>
+  <h2>Enter Person Details</h2>
+  <form action="http://localhost:3000/person" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+    <br><br>
+
+    <label for="work">Work:</label>
+    <select id="work" name="Work" required>
+      <option value="">Select Job</option>
+      <option value="chef">Chef</option>
+      <option value="Customer">Customer</option>
+      <option value="Manager">Manager</option>
+    </select>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" pattern="\d{10}" required>
+    <br><br>
+
+    <button type="submit">Submit Person</button>
+  </form>
+
+  <hr>
+
+  <h2>Enter Menu Details</h2>
+  <form action="http://localhost:3000/menu" method="POST">
+    <label for="item">Item:</label>
+    <input type="text" id="item" name="item" required>
+    <br><br>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" required>
+    <br><br>
+
+    <button type="submit">Submit Menu</button>
+  </form>
+</body>
+</html>
