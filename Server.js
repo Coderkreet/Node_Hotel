@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express();
 const db = require('./mongoose')
-const PORT = 3000;
 const person = require('./Models/Person')
 const menu = require('./Models/Manu')
+require('dotenv').config();
+const PORT = process.env.PORT;
+
 
 
 // Body Parser 
@@ -14,7 +16,7 @@ const Manu = require('./Models/Manu');
 app.use(bodyParser.json());
 
 app.listen(PORT , ()=>{
-    console.log("Server run in 3000 port")
+    console.log(`Server run in ${PORT} port`)
 })
 
 // All get req
